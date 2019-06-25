@@ -1,0 +1,56 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
+using std::cin;
+
+int main(){
+	vector<int> num, sum;
+	int n, s;
+	while(cin>>n)
+		num.push_back(n);
+	int m=0, k=num.size()-1;
+	while(m<=k){
+		cout<<num[m]+num[k]<<endl;
+		++m;
+		--k;
+	}
+
+	/*
+	if(num.size()%2 == 0){
+		for(decltype(num.size()) i=0; i!=num.size()/2;++i){
+			s=num[i]+num[num.size()-1-i];
+			sum.push_back(s);
+		}
+	}
+	else{
+		for(decltype(num.size()) i=0; i!=num.size()/2+1;++i){
+			s=num[i]+num[num.size()-1-i];
+			sum.push_back(s);
+		}
+	}
+	for(auto i:sum)
+		cout<<i<<endl;
+	*/
+}
+
+/*
+int main() {
+	vector<string> v1;
+	string s;
+	while(cin>>s){
+		v1.push_back(s);
+	}
+	cout<<v1.size()<<endl;
+	for(decltype(v1.size()) i = 0; i!=v1.size();++i)
+		for(decltype(v1[i].size()) j=0; j!=v1[i].size();++j){
+			v1[i][j]=toupper(v1[i][j]);
+		}
+	for(auto i:v1)
+		cout<<i<<endl;
+}
+*/
